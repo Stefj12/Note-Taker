@@ -20,6 +20,11 @@ You will need to install node.js, inquirer, and express to run this program.
   
  you'll need to run node server.js from the js folder in the console, then go to localhost:3000 in your browser. This will bring you to the starting page of the app.
  
+ ## Screen Shot
+ ![Screenshot (10)](https://user-images.githubusercontent.com/70540019/95666178-141ead80-0b0c-11eb-83b4-451c7465660c.png)
+
+ 
+ 
  ## Questions
   Find me on GitHub at https://github.com/Stefj12
   
