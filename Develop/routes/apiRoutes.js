@@ -80,18 +80,12 @@ module.exports = function (app) {
     // I added this below code so you could clear out the table while working with the functionality.
     // Don"t worry about it!
 
-    // Empty out the arrays of data
-    app.delete("/api/notes:id", function (req, res) {
-        savedNotes.forEach(note => {
-            if (note.id == req.params.id) {
-                savedNotes.splice(savedNotes.indexOf(note), 1);
-            }
-        })
-        fs.writeFileSync(path.join(__dirname, "../db/db.json"), JSON.stringify(savedNotes, null, 2));
-        res.send("Note Deleted")
-        
+    
 
+    // DELETE "/api/notes" deletes the note with an id equal to req.params.id
+     app.delete("/api/notes/:id", (req, res) => {
+        let noteId = req.params.id;
+        res.send('Got a DELETE request at /noteId')   
     })
 
-    
 }
