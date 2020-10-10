@@ -87,7 +87,7 @@ module.exports = function (app) {
                 savedNotes.splice(savedNotes.indexOf(note), 1);
             }
         })
-        fs.writeFileSync(path.join(__dirname, "../db/db.json"), JSON.stringify(savedNotes, null, 2));
+        fs.writeFileSync(path.join(__dirname, "./db/db.json"), JSON.stringify(savedNotes, null, 2));
         res.send("Note Deleted")
         
 
