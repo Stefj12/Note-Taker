@@ -85,7 +85,8 @@ module.exports = function (app) {
     // DELETE "/api/notes" deletes the note with an id equal to req.params.id
      app.delete("/api/notes/:id", (req, res) => {
         let noteId = req.params.id;
-        res.send('Got a DELETE request at /noteId')   
+        res.json() 
+        
     })
 
 }

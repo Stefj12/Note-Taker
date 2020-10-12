@@ -1,1 +1,23 @@
-[{"title":"Test Title","text":"Test text"},{"title":"Test data","text":"HIIIIIII"},{"title":"New Notes","text":"Check me out"},{"title":"Testttinggg","text":"Testtttttt\n"},{"title":"This app is awesome","text":"Loving this pad \n"}]
+[
+    {
+        "title": "Test Title",
+        "text": "Test text",
+        "id": 1
+    },
+    {
+        "title": "Test data",
+        "text": "HIIIIIII"
+    },
+    {
+        "title": "New Notes",
+        "text": "Check me out"
+    },
+    {
+        "title": "Testttinggg",
+        "text": "Testtttttt\n"
+    },
+    {
+        "title": "This app is awesome",
+        "text": "Loving this pad \n"
+    }
+]
