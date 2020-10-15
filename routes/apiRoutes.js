@@ -80,13 +80,29 @@ module.exports = function (app) {
     // I added this below code so you could clear out the table while working with the functionality.
     // Don"t worry about it!
 
-    
+
 
     // DELETE "/api/notes" deletes the note with an id equal to req.params.id
-     app.delete("/api/notes/:id", (req, res) => {
-        let noteId = req.params.id;
-        res.json() 
-        
+    app.delete("/api/notes/:id", (req, res) => {
+        var noteId = req.params.id
+        fs.readFile("./db/db.json", "utf8", function (err, response) {
+            if (err) {
+                console.log(err);
+            }
+            console.log(response);
+            // Converting the response into a JSON object
+            let allNotes = JSON.parse(response)
+            const filteredNotes = allNotes.filter(note => note.id != req.params.id)
+            fs.writeFile("./db/db.json", JSON.stringify(filteredNotes, null, 2), err => {
+                if (err) {
+                    console.log(err);
+
+                }
+                res.json(filteredNotes)
+                console.log("NOTE Deleted!", req.params.id);
+            })
+
+        })
     })
 
 }
